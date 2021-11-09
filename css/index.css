@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    justify-content: space-between;
+}
+
+header * {
+    display: inline-block;
+}
