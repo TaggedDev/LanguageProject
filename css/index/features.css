@@ -1,0 +1,39 @@
+.features { 
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.features, .features * {
+    background-color: #292929;
+}
+
+.features img {
+    height: 350px;
+    width: 350px;
+}
+
+.features ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.features ul li {
+    width: 350px;
+    padding: 0 10px 0 10px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.features h2, h4 {
+    font-weight: 300;
+}
+
+.features h2 {
+    margin-top: 15px
+}
+
+.features h4 {
+    margin-top: 20px;
+}

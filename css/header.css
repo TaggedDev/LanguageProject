@@ -1,0 +1,54 @@
+/*
+    === HEADER START ===
+*/
+
+header li, header a, header button {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    background-color: #292929;
+    text-decoration: none;
+}
+
+header {
+    background-color: #292929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+header button {
+    padding: 9px 25px;
+    background-color: #69B772;
+    opacity: 1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+    background-color: #69B772;
+    opacity: .8;
+}
+ 
+.header__searchbar {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;    
+}
+
+.profile_button {
+    background-color: #292929;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+/*
+    === HEADER END ===
+*/
