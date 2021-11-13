@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+body {
+    margin: 0;
+    background-color: #262525;
+    font-family: 'Montserrat', sans-serif;
+}
+.auth {
+    width: 1100px;
+    height: 700px;
+    background-color: #dbdbdb;
+    border-radius: 40px;
+    position: fixed;
+    left: 25%;
+    top: 20%;
+}
+.auth h2 {
+    font-weight: 400;
+}
+.main {
+    text-align: center;
+    font-size: 60px;
+    padding: 0px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.enter_link {
+    text-align: center;
+    font-size: 20px;
+    padding: 0px;
+    margin-top:0px;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+.enter_link a {
+    color: #9498ff;
+}
+.info1 {
+    text-align:left;
+    display:block;
+    padding-left: 150px;
+    font-size: 30px;
+    margin-bottom: 10px
+}
+.info2 {
+    text-align:left;
+    display:block;
+    padding-left: 150px;
+    font-size: 30px;
+}
+.window {
+    display:inline-block;
+    width: 800px;
+    height: 40px;
+    border-radius: 15px;
+    padding-left: 150px;
+    margin-bottom: 0px
+}
+.Angaben {
+    display:block;
+    width: 800px;
+    height: 40px;
+    border-radius: 5px;
+    position: fixed;
+    font-size:30px;
+    border-color: #dedede;
+    border-style:solid;
+}
+.button_box {
+    margin-top: 120px;
+    margin-left: 300px;
+    
+}
+.button_push {
+    width: 500px;
+    height: 100px;
+    font-size: 60px;
+    text-align:center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-transform: uppercase
+}
