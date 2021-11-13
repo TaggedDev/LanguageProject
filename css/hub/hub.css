@@ -49,7 +49,7 @@ body {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #69B772;
+    background-color:rgba(105, 183, 114, .7);
 }
 
 .item_image_overlay:hover {
@@ -61,7 +61,6 @@ body {
 }
 
 .item_image_overlay_text {
-    background-color: #69B772;
     color: white;
     font-size: 20px;
     position: absolute;
