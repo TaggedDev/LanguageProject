@@ -2,51 +2,63 @@
     === HEADER START ===
 */
 
-header li, header a, header button {
-    font-weight: 500;
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar {
+    padding: 30px;
+    background-color: #292929;
     font-size: 20px;
-    color: #fff;
-    background-color: #292929;
-    text-decoration: none;
-}
-
-header {
-    background-color: #292929;
+    text-transform: uppercase;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 30px 10%;
 }
 
-header button {
-    padding: 9px 25px;
-    background-color: #69B772;
-    opacity: 1;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+.navbar__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    color: #292929;
+    
+    text-align: center;
+    width: 30%;
+    
+    text-decoration: none;
+    color: #fff;
 }
 
-header button:hover {
-    background-color: #69B772;
-    opacity: .8;
-}
- 
-.header__searchbar {
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;    
+.navbar__underline {
+    text-decoration: none; 
+    position: relative; 
+}   
+
+ .navbar__underline:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: -4px; 
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 0%;
+    background: #fff;   
+    
+
+    visibility: hidden;
+    transition:.5s;
 }
 
-.profile_button {
-    background-color: #292929;
-}
-
-.logo {
-    cursor: pointer;
+.navbar__underline:hover:after {
+    visibility: visible;
+    width: 100%;
+    background: #fff;
 }
 
 /*

@@ -1,6 +1,6 @@
 .features { 
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
     display: flex;
     justify-content: center;
 }
@@ -26,7 +26,6 @@
     padding: 0 10px 0 10px;
     text-align: center;
     color: #fff;
-
 }
 
 .features h2, h4 {
