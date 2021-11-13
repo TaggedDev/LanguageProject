@@ -6,7 +6,7 @@ footer {
 
 .footer__item {
     background-color: #151515;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .footer__item a {
@@ -30,7 +30,7 @@ footer {
     content: '';
     height: 2px;
     bottom: -4px; 
-    margin: 0 auto;
+    margin: 0px auto;
     left: 0;
     right: 0;
     width: 0%;

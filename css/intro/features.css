@@ -10,8 +10,8 @@
 }
 
 .features img {
-    height: 350px;
-    width: 350px;
+    height: auto;
+    width: 100%;
 }
 
 .features ul {
@@ -22,7 +22,7 @@
 }
 
 .features ul li {
-    width: 350px;
+    width: 25%;
     padding: 0 10px 0 10px;
     text-align: center;
     color: #fff;
@@ -33,9 +33,9 @@
 }
 
 .features h2 {
-    margin-top: 15px
+    padding-top: 15px
 }
 
 .features h4 {
-    margin-top: 20px;
+    padding-top: 20px;
 }
