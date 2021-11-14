@@ -25,6 +25,11 @@
     width: 350px;
     color: #fff;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro__text {
@@ -38,18 +43,51 @@
     padding-bottom: 30px;
 }
 
-.intro button {
-    padding: 10px 30px 10px 30px;
-    margin-top: 50px;
-    background-color: #69B772;
-    font-weight: 700;
-    font-size: 30px;
-    
-    border-radius: 15px;
-    border: none;
+.intro__button {
+    position: relative;
+    display: inline-block;
+    width: 210px;
+    height: 70px;
 
-    opacity: 1;
-    cursor: pointer;    
+    margin-top: 50px;
+
+    line-height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 5px;
+    transition: 2s;
+}
+
+.intro__button span {
+    z-index: 10;
+}
+
+.button__svg, .button__rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+}
+
+.button__rect {
+    stroke: #67B26F;
+    fill: #67b26f7a;
+    stroke-width: 5;
+    stroke-dasharray: 70px 210px;
+    stroke-dashoffset: 595px;
+    transition: .5s;
+}
+
+.intro__button:hover .button__rect,
+.intro__button:focus .button__rect {
+    fill: #4ca2cd7a;
+    stroke: #4ca2cd;
+    stroke-dashoffset: 105px;
 }
 
 .intro__button a {
