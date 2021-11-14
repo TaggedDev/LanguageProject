@@ -18,15 +18,47 @@
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    max-width: 80%;
 }
 
+@media (max-width: 1250px) {
+    .features ul {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .features ul {
+        max-width: 95%;
+    }
+}
+
+
 .features ul li {
-    width: 25%;
+    max-width: 25%;
     padding: 0 10px 0 10px;
     text-align: center;
     color: #fff;
 }
+
+
+@media (max-width: 767px) {
+    .features ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features ul li {
+        max-width: none;
+    }
+
+    .feature__description {
+        padding-bottom: 30px;
+    }
+}
+
 
 .features h2, h4 {
     font-weight: 300;
