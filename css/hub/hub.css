@@ -10,6 +10,8 @@ body {
 
 .container__items {
     font-size: 20px;
+    min-width: 1080px;
+    max-width: 1800px;
     width: 80%;
     text-transform: uppercase;
     display: flex;
@@ -35,7 +37,7 @@ body {
 
 .item__image {
     height: 350px;
-    width: 350px;
+    width: 100%;
 }
 
 .item_image_overlay {
