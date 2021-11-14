@@ -55,7 +55,7 @@
     }
 
     .feature__description {
-        padding-bottom: 30px;
+        padding-bottom: 32px;
     }
 }
 
@@ -65,9 +65,9 @@
 }
 
 .features h2 {
-    padding-top: 15px
+    padding-top: 16px
 }
 
 .features h4 {
-    padding-top: 20px;
+    padding-top: 16px;
 }

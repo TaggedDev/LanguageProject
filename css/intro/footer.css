@@ -1,12 +1,12 @@
 footer {
-    padding-top: 20px;
+    padding-top: 24px;
     text-align: center;
     background-color: #151515;
 }
 
 .footer__item {
     background-color: #151515;
-    padding-top: 10px;
+    padding-top: 8px;
 }
 
 .footer__item a {
@@ -15,8 +15,8 @@ footer {
 
 .copyright {
     color: #ababab;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 24px;
+    padding-bottom: 8px;
 }
 
 

@@ -31,12 +31,12 @@ body {
 }
 
 .item__name {
-    padding-top: 15px;
-    font-size: 30px;
+    padding-top: 16px;
+    font-size: 32px;
 }
 
 .item__image {
-    height: 350px;
+    height: 344px;
     width: 100%;
 }
 
@@ -47,7 +47,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 350px;
+    height: 344px;
     width: 100%;
     opacity: 0;
     transition: .5s ease;
@@ -55,16 +55,12 @@ body {
 }
 
 .item_image_overlay:hover {
-    width: 100%;
-    height: 350px;
-    bottom: 0;
-    left: 0;
     opacity: 1;   
 }
 
 .item_image_overlay_text {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     position: absolute;
     top: 50%;
     left: 50%;
