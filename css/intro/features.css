@@ -51,7 +51,7 @@
     }
 
     .features ul li {
-        max-width: none;
+        max-width: 80%;
     }
 
     .feature__description {
