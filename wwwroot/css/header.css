@@ -1,0 +1,66 @@
+/*
+    === HEADER START ===
+*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar {
+    padding: 32px;
+    background-color: #292929;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    color: #292929;
+    
+    text-align: center;
+    width: 30%;
+    
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar__underline {
+    text-decoration: none; 
+    position: relative; 
+}   
+
+ .navbar__underline:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: -4px; 
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 0%;
+    background: #fff;   
+    
+
+    visibility: hidden;
+    transition:.5s;
+}
+
+.navbar__underline:hover:after {
+    visibility: visible;
+    width: 100%;
+    background: #fff;
+}
+
+/*
+    === HEADER END ===
+*/
