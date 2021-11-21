@@ -10,8 +10,8 @@ using web4.Data;
 namespace Lingva.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211121161309_InititalDB")]
-    partial class InititalDB
+    [Migration("20211121181917_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

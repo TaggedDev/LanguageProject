@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+@{ 
+    Layout = null;
+    ViewBag.Title = "Admin";
+} 
+
+<h1>Index</h1>
+<ul>
+    @foreach (var user in Model)
+    {
+        <li>@user.Id</li>
+    }
+</ul>
