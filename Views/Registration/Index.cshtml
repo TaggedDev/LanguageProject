@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="auth">
-        <form method="post" asp-controller="Account" asp-action="Register" class="window">
+        <form method="post" asp-controller="Registration" asp-action="Index" class="window">
             <div asp-validation-summary="ModelOnly"></div>
             <h1 class="main">РЕГИСТРАЦИЯ</h1>
             <p class="enter_link">Уже есть аккаунт? <a href="#">Авторизоваться</a></p>
@@ -39,6 +39,11 @@
             <div>
                 <input class="button_push" type="submit" value="Зарегистрироваться" />
             </div>
+            <div class="errors">
+                @Html.ValidationSummary()
+            </div>
+            
+            
         </form>
     </div>
 </body>
