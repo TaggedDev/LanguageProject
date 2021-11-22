@@ -26,9 +26,9 @@ namespace web4
             services.AddDefaultIdentity<IdentityUser>(
                 options =>
                 {
-                    options.Password.RequireDigit = true;
-                    options.Password.RequiredLength = 7;
-                    options.Password.RequireUppercase = true;
+                    options.Password.RequireDigit = false;
+                    options.Password.RequiredLength = 2;
+                    options.Password.RequireUppercase = false;
                     options.Lockout.MaxFailedAccessAttempts = 5;
                 })
                 .AddRoles<IdentityRole>()
