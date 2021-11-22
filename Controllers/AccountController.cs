@@ -27,7 +27,7 @@ namespace Lingva.Controllers
         {
             if (ModelState.IsValid)
             {
-                IdentityUser user = new IdentityUser { Email = model.Email, UserName = model.Email };
+                IdentityUser user = new IdentityUser { Email = model.Email, UserName = model.UserName };
                 // добавляем пользователя
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
