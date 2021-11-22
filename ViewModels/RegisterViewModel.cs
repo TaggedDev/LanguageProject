@@ -4,20 +4,20 @@ namespace Lingva.ViewModels
 {
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Email уже занят")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Такое имя пользователя уже используется")]
         [Display(Name = "Имя пользователя")]
-        public int UserName { get; set; }
+        public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Пароль не соответствует требованиям")]
         [DataType(DataType.Password)]
         [Display(Name = "Пароль")]
         public string Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Пароли не совпадают")]
         [Compare("Password", ErrorMessage = "Пароли не совпадают")]
         [DataType(DataType.Password)]
         [Display(Name = "Подтвердить пароль")]
