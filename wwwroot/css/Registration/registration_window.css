@@ -97,5 +97,6 @@ body {
     text-transform: uppercase
 }
 .errors {
+    background-color: red;
     color: #fff;
 }

@@ -1,9 +1,6 @@
 ﻿using Lingva.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Lingva.Controllers
@@ -31,6 +28,7 @@ namespace Lingva.Controllers
             {
                 IdentityUser user = new IdentityUser { Email = model.Email, UserName = model.UserName };
                 // добавляем пользователя
+                string errorMessage = string.Empty;
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -38,6 +36,12 @@ namespace Lingva.Controllers
                     await _signInManager.SignInAsync(user, false);
                     return RedirectToAction("Index", "Intro");
                 }
+                else
+                {
+                    foreach (var error in result.Errors)
+                        errorMessage = errorMessage + error.Description + '\n';
+                }
+                ViewBag.ErrorMessage = errorMessage;
             }
             return View(model);
         }

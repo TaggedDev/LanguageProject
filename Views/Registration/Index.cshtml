@@ -1,6 +1,7 @@
 ﻿@model Lingva.ViewModels.RegisterViewModel
 @{
     Layout = null;
+    string errors = ViewBag.ErrorMessage;
 }
 
 <!doctype html>
@@ -40,7 +41,7 @@
                 <input class="button_push" type="submit" value="Зарегистрироваться" />
             </div>
             <div class="errors">
-                @Html.ValidationSummary()
+                @errors    
             </div>
             
             

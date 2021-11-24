@@ -1,3 +1,4 @@
+using Lingva.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -32,8 +33,7 @@ namespace web4
                     options.Lockout.MaxFailedAccessAttempts = 5;
                 })
                 .AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddErrorDescriber<CustomIdentityErrorDescriber>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
