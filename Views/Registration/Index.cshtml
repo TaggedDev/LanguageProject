@@ -20,28 +20,32 @@
             <div class="field">
                 <label asp-for="Email"></label><br />
                 <input class="Angaben" asp-for="Email" />
-                <span asp-validation-for="Email"></span>
             </div>
             <div class="field">
                 <label asp-for="UserName"></label><br />
-                <input class="Angaben" asp-for="UserName" />
-                <span asp-validation-for="UserName"></span>
+                <div class="field_inline">
+                    <input class="Angaben" asp-for="UserName" />
+                </div>
             </div>
             <div class="field">
                 <label asp-for="Password"></label><br />
                 <input class="Angaben" asp-for="Password" />
-                <span asp-validation-for="Password"></span>
+               
             </div>
             <div class="field">
                 <label asp-for="PasswordConfirm"></label><br />
                 <input class="Angaben" asp-for="PasswordConfirm" />
-                <span asp-validation-for="PasswordConfirm"></span>
+                
             </div>
             <div>
                 <input class="button_push" type="submit" value="Зарегистрироваться" />
             </div>
             <div class="errors">
-                @errors    
+                <div><span asp-validation-for="Email"></span></div>
+                <div><span asp-validation-for="UserName"></span></div>
+                <div><span asp-validation-for="Password"></span></div>
+                <div><span asp-validation-for="PasswordConfirm"></span></div>
+                @errors
             </div>
             
             
