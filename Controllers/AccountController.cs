@@ -1,9 +1,6 @@
 ﻿using Lingva.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Lingva.Controllers
@@ -21,6 +18,12 @@ namespace Lingva.Controllers
 
         [HttpGet]
         public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Check()
         {
             return View();
         }
@@ -54,7 +57,7 @@ namespace Lingva.Controllers
         [HttpGet]
         public IActionResult Login(string returnUrl = null)
         {
-            return View(new LoginViewModel { ReturnURL = returnUrl });
+            return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
 
         [HttpPost]
@@ -63,18 +66,27 @@ namespace Lingva.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
-                if (result.Succeeded)
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user != null)
                 {
-                    if (!string.IsNullOrEmpty(model.ReturnURL) && Url.IsLocalUrl(model.ReturnURL)) // проверяем, принадлежит ли URL приложению
-                        return Redirect(model.ReturnURL);
+                    var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
+                    if (result.Succeeded)
+                    {
+                        if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl)) // проверяем, принадлежит ли URL приложению
+                            return Redirect(model.ReturnUrl);
+                        else
+                            return RedirectToAction("", "");
+                    }
                     else
-                        return RedirectToAction("Index", "Home");
+                    {
+                        ModelState.AddModelError("", "Неправильный логин и (или) пароль");
+                    }
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Неправильный логин и (или) пароль");
+                    ModelState.AddModelError("", "Учетной записи с такой электронной почтой не существует");
                 }
+                
                 
             }
             return View(model);
@@ -87,5 +99,7 @@ namespace Lingva.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+
+        
     }
 }
