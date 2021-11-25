@@ -28,8 +28,10 @@ namespace web4
                 options =>
                 {
                     options.Password.RequireDigit = false;
-                    options.Password.RequiredLength = 2;
+                    options.Password.RequireNonAlphanumeric = false;
                     options.Password.RequireUppercase = false;
+                    options.Password.RequiredLength = 2;
+                    options.SignIn.RequireConfirmedEmail = false;
                     options.Lockout.MaxFailedAccessAttempts = 5;
                 })
                 .AddRoles<IdentityRole>()
