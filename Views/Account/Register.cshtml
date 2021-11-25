@@ -16,7 +16,7 @@
         <form method="post" asp-controller="Account" asp-action="Register" class="window">
             <div asp-validation-summary="ModelOnly"></div>
             <h1 class="main">РЕГИСТРАЦИЯ</h1>
-            <p class="enter_link">Уже есть аккаунт?<a href="#">Авторизоваться</a></p>
+            <p class="enter_link">Уже есть аккаунт?<a href="~/Account/Login">Авторизоваться</a></p>
             <div class="field">
                 <label asp-for="Email"></label><br />
                 <input class="Angaben" asp-for="Email" />
