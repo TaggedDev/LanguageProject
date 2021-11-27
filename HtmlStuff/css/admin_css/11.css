@@ -10,6 +10,12 @@ body{
     padding: 0;
 }
 
+.container
+{
+    display: flex;
+    flex-direction: column;
+}
+
 table {
     background-color: #ffffff;
     font-size: 30px;
@@ -29,7 +35,6 @@ td, th {
 }
 
 .new-lessonout {
-    background-color: #ffffff;
     width: 220px;
     height: 50px;
     margin: auto auto;
@@ -37,6 +42,21 @@ td, th {
 }
 
 .new-lesson {
+    background-color: #ffffff;
     font-size: 25px;
-    margin:auto auto;
+    margin: 30px auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.scrollable {
+    height: 500px; /* or any value */
+    overflow-y: auto;
 }
