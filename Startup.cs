@@ -1,4 +1,5 @@
 using Lingva.ViewModels;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -31,11 +32,19 @@ namespace web4
                     options.Password.RequireNonAlphanumeric = false;
                     options.Password.RequireUppercase = false;
                     options.Password.RequiredLength = 2;
+                    options.User.RequireUniqueEmail = true;
                     options.SignIn.RequireConfirmedEmail = false;
                     options.Lockout.MaxFailedAccessAttempts = 5;
                 })
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>().AddErrorDescriber<CustomIdentityErrorDescriber>();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Account/Login";
+                    options.AccessDeniedPath = "/Account/Login";
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(120);
+                });
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
