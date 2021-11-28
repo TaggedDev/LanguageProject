@@ -1,0 +1,69 @@
+<div class = "lesson_box" >
+           <form class = "content">
+               <div class = "tasks">
+                   <div class = "oneline">
+                       <form>
+                        <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <span class = "freeplace"> </span> </p>
+                            <div class = "radio_buttons">
+                                <input class = "radio" type="radio" id = "choice1" name="answer" value="Answer1">
+                                <label for = "choice1">Answer1 </label> 
+                                <input class = "radio" type="radio" id = "choice2" name="answer" value="Answer1">
+                                <label for = "choice2">Answer2 </label>
+                                <input class = "radio" type="radio" id = "choice3" name="answer" value="Answer1">
+                                <label for = "choice3">Answer3 </label>
+                           </div>
+                           </form>
+                    </div>
+                    <div class = "oneline">
+                       <form>
+                        <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <span class = "freeplace"> </span> </p>
+                            <div class = "radio_buttons">
+                                <input class = "radio" type="radio" id = "choice1" name="answer" value="Answer1">
+                                <label for = "choice1">Answer1 </label> 
+                                <input class = "radio" type="radio" id = "choice2" name="answer" value="Answer1">
+                                <label for = "choice2">Answer2 </label>
+                                <input class = "radio" type="radio" id = "choice3" name="answer" value="Answer1">
+                                <label for = "choice3">Answer3 </label>
+                           </div>
+                           </form>
+                    </div>
+                    <div class = "oneline">
+                       <form>
+                        <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <span class = "freeplace"> </span> </p>
+                            <div class = "radio_buttons">
+                                <input class = "radio" type="radio" id = "choice1" name="answer" value="Answer1">
+                                <label for = "choice1">Answer1 </label> 
+                                <input class = "radio" type="radio" id = "choice2" name="answer" value="Answer1">
+                                <label for = "choice2">Answer2 </label>
+                                <input class = "radio" type="radio" id = "choice3" name="answer" value="Answer1">
+                                <label for = "choice3">Answer3 </label>
+                           </div>
+                           </form>
+                        <form>
+                        <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <span class = "freeplace"> </span> </p>
+                            <div class = "radio_buttons">
+                                <input class = "radio" type="radio" id = "choice1" name="answer" value="Answer1">
+                                <label for = "choice1">Answer1 </label> 
+                                <input class = "radio" type="radio" id = "choice2" name="answer" value="Answer1">
+                                <label for = "choice2">Answer2 </label>
+                                <input class = "radio" type="radio" id = "choice3" name="answer" value="Answer1">
+                                <label for = "choice3">Answer3 </label>
+                           </div>
+                           </form>
+                        <form>
+                        <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <span class = "freeplace"> </span> </p>
+                            <div class = "radio_buttons">
+                                <input class = "radio" type="radio" id = "choice1" name="answer" value="Answer1">
+                                <label for = "choice1">Answer1 </label> 
+                                <input class = "radio" type="radio" id = "choice2" name="answer" value="Answer1">
+                                <label for = "choice2">Answer2 </label>
+                                <input class = "radio" type="radio" id = "choice3" name="answer" value="Answer1">
+                                <label for = "choice3">Answer3 </label>
+                           </div>
+                           </form>
+                    </div>
+                </div>
+                <div class = "whitespace"> </div>
+            
+            </form>
+        </div>

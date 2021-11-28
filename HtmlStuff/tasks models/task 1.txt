@@ -1,0 +1,49 @@
+<div class = "lesson_box" >
+           <form class = "content">
+           <div class = "tasks">
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"></p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+            </div>
+            <div class = "whitespace"> </div>
+            </form>
+        </div>

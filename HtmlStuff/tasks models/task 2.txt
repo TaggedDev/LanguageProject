@@ -1,0 +1,49 @@
+ <div class = "lesson_box" >
+           <form class = "content">
+            <div class = "oneline">
+                <div class = "top_input" type = "text"><p class = "Inhalte">Vivamus finibus velit in dui aliquam, in dictum nulla malesuada. Aliquam lacinia neque quis faucibus ultricies. Donec blandit nunc eleifend odio auctor placerat. Cras bibendum nulla augue, nec sodales urna iaculis et. Fusce tempor, mi maximus luctus tincidunt, nisi tortor porta lacus, nec dapibus nibh urna porta nisi. Vivamus at posuere lectus, ut molestie nulla. In sit amet condimentum urna, vitae interdum ex. Aliquam faucibus suscipit metus sit amet dapibus. Sed pretium nibh sit amet tortor tristique, et dictum urna commodo. Pellentesque tempus elit leo, non pulvinar ipsum ornare in. Mauris pretium bibendum mattis. Mauris sit amet condimentum nibh, vitae malesuada justo. Nullam scelerisque quam vitae felis dictum, pretium congue eros ornare. Praesent at ante condimentum, maximus arcu et, eleifend diam. Vestibulum tempus ipsum enim, a pellentesque nulla porttitor sed. Donec maximus in sapien a egestas.Vivamus finibus velit in dui aliquam, in dictum nulla malesuada. Aliquam lacinia neque quis faucibus ultricies. Donec blandit nunc eleifend odio auctor placerat. Cras bibendum nulla augue, nec sodales urna iaculis et. Fusce tempor, mi maximus luctus tincidunt, nisi tortor porta lacus, nec dapibus nibh urna porta nisi. Vivamus at posuere lectus, ut molestie nulla. In sit amet condimentum urna, vitae interdum ex. Aliquam faucibus suscipit metus sit amet dapibus. Sed pretium nibh sit amet tortor tristique, et dictum urna commodo. Pellentesque tempus elit leo, non pulvinar ipsum ornare in. Mauris pretium bibendum mattis. Mauris sit amet condimentum nibh, vitae malesuada justo. Nullam scelerisque quam vitae felis dictum, pretium congue eros ornare. Praesent at ante condimentum, maximus arcu et, eleifend diam. Vestibulum tempus ipsum enim, a pellentesque nulla porttitor sed. Donec maximus in sapien a egestas.Vivamus finibus velit in dui aliquam, in dictum nulla malesuada. Aliquam lacinia neque quis faucibus ultricies. Donec blandit nunc eleifend odio auctor placerat. Cras bibendum nulla augue, nec sodales urna iaculis et. Fusce tempor, mi maximus luctus tincidunt, nisi tortor porta lacus, nec dapibus nibh urna porta nisi. Vivamus at posuere lectus, ut molestie nulla. In sit amet condimentum urna, vitae interdum ex. Aliquam faucibus suscipit metus sit amet dapibus. Sed pretium nibh sit amet tortor tristique, et dictum urna commodo. Pellentesque tempus elit leo, non pulvinar ipsum ornare in. Mauris pretium bibendum mattis. Mauris sit amet condimentum nibh, vitae malesuada justo. Nullam scelerisque quam vitae felis dictum, pretium congue eros ornare. Praesent at ante condimentum, maximus arcu et, eleifend diam. Vestibulum tempus ipsum enim, a pellentesque nulla porttitor sed. Donec maximus in sapien a egestas.</p> </div>
+            </div>
+            <div class = "tasks">
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                 <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                 <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                 <div class = "oneline">
+                    <p class = "task_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit <input type ="text"> </p>
+                </div>
+                
+            </div>
+            </form>
+        </div>
