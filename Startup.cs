@@ -38,6 +38,7 @@ namespace web4
                 })
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>().AddErrorDescriber<CustomIdentityErrorDescriber>();
+            services.ConfigureApplicationCookie(options => options.LoginPath = "/Account/Login");
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
