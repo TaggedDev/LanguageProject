@@ -1,4 +1,5 @@
 using Lingva.ViewModels;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -28,18 +29,22 @@ namespace web4
                 options =>
                 {
                     options.Password.RequireDigit = false;
-                    options.Password.RequiredLength = 2;
+                    options.Password.RequireNonAlphanumeric = false;
                     options.Password.RequireUppercase = false;
+                    options.Password.RequiredLength = 2;
+                    options.User.RequireUniqueEmail = true;
+                    options.SignIn.RequireConfirmedEmail = false;
                     options.Lockout.MaxFailedAccessAttempts = 5;
                 })
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>().AddErrorDescriber<CustomIdentityErrorDescriber>();
+            services.ConfigureApplicationCookie(options => options.LoginPath = "/Account/Login");
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
