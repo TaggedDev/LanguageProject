@@ -12,6 +12,6 @@ namespace Lingva.Models
     public class Language
     {
         public ELanguageList LanguageType { get; set; }
-        public List<Theme> Theme { get; set; }
+        public List<Theme> Themes { get; set; }
     }
 }
