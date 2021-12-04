@@ -1,16 +1,32 @@
 ﻿<header class="header">
     <nav class="navbar">
-        <a href="~/Intro/Index" class="navbar__item"><span class="navbar__underline">LINGVA</span></a>
-        <a href="~/Hub/Index" class="navbar__item"><span class="navbar__underline">HUB</span></a>
-        @{
-            if (User.Identity.IsAuthenticated)
-            {
-                <a href="~/Account/Check    " class="navbar__item"><span class="navbar__underline">@User.Identity.Name</span></a>
+        <div class="navbar__item"><a href="~/Intro/Index" class="navbar__content"><span class="navbar__underline">LINGVA</span></a></div>
+        <div class="navbar__item navbar__hub">
+            <ul>
+                <li><a href="#" class="navbar__content"><span class="navbar__underline">ЯЗЫКИ</span></a></li>
+                <li><a href="#" class="navbar__content"><span class="navbar__underline">ОНЛАЙН-ЧАТ</span></a></li>
+                <li><a href="#" class="navbar__content"><span class="navbar__underline">СЛОВАРЬ</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar__item">
+            @{
+                if (User.Identity.IsAuthenticated)
+                {
+                    <a class="navbar__item__profile" href="~/Account/Check">
+                        <img class="navbar__profile__avatar" src="../../assets/gramm.png" alt="pfp">
+                        <span class="navbar__profile__username">@User.Identity.Name</span>
+                    </a>
+                }
+                else
+                {
+                    <a class="navbar__item__profile" href="~/Account/Register">
+                        <img class="navbar__profile__avatar" src="../../assets/gramm.png" alt="pfp">
+                        <span class="navbar__profile__username">ПРОФИЛЬ</span>
+                    </a>
+                }
             }
-            else
-            {
-                <a href="~/Account/Register" class="navbar__item"><span class="navbar__underline">ПРОФИЛЬ</span></a>
-            }
-        }
+
+        </div>
+       
     </nav>
 </header>

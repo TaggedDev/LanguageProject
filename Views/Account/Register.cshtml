@@ -18,27 +18,24 @@
             <h1 class="main">РЕГИСТРАЦИЯ</h1>
             <p class="enter_link">Уже есть аккаунт?<a href="~/Account/Login">Авторизоваться</a></p>
             <div class="field">
-                <label asp-for="Email"></label><br />
-                <input class="Angaben" asp-for="Email" />
+                <label class="field__label" asp-for="Email"></label><br />
+                <input class="field__data" asp-for="Email" />
             </div>
             <div class="field">
-                <label asp-for="UserName"></label><br />
-                <div class="field_inline">
-                    <input class="Angaben" asp-for="UserName" />
-                </div>
+                <label class="field__label" asp-for="UserName"></label><br />
+                <input class="field__data" asp-for="UserName" />
             </div>
             <div class="field">
-                <label asp-for="Password"></label><br />
-                <input class="Angaben" asp-for="Password" />
+                <label class="field__label" asp-for="Password"></label><br />
+                <input class="field__data" asp-for="Password" />
 
             </div>
             <div class="field">
-                <label asp-for="PasswordConfirm"></label><br />
-                <input class="Angaben" asp-for="PasswordConfirm" />
-
+                <label class="field__label" asp-for="PasswordConfirm"></label><br />
+                <input class="field__data" asp-for="PasswordConfirm" />
             </div>
-            <div>
-                <input class="button_push" type="submit" value="ДАЛЕЕ" />
+            <div class="button__field">
+                <input class="button__push button" type="submit" value="ДАЛЕЕ" />
             </div>
             <div class="errors">
                 <div><span asp-validation-for="Email"></span></div>
