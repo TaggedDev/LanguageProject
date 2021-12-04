@@ -31,6 +31,7 @@
     word-wrap: break-word;
     width: 100%;
     font-weight: 300;
+    padding-bottom: 15px;
 }
 
 .intro__title {
@@ -38,54 +39,34 @@
     padding-bottom: 32px;
 }
 
+.button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 40px;
+    border-radius: 8px;
+    color: #212121;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 15px;
+    transition: 0.4s;
+}
+
 .intro__button {
-    position: relative;
-    display: inline-block;
-    width: 208px;
-    height: 72px;
-
-    margin-top: 48px;
-
-    line-height: 72px;
     color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    font-size: 30px;
-    letter-spacing: 4px;
-    transition: 2s;
+    background-color: rgba(105, 183, 114);
+    box-shadow: inset 0 -8px 0 0 rgba(0, 0, 0, 0.2);
+    transition: .1s;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.2);
 }
 
-.intro__button span {
-    z-index: 10;
+.intro__button:hover {
+    box-shadow: inset 0 -6px 0 0 rgba(0,0,0,0.2);
 }
 
-.button__svg, .button__rect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    fill: none;
+.intro__button:active {
+    box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.2);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
-
-.button__rect {
-    stroke: #67B26F;
-    fill: #67b26f7a;
-    stroke-width: 5;
-    stroke-dasharray: 70px 210px;
-    stroke-dashoffset: 595px;
-    transition: .5s;
-}
-
-.intro__button:hover .button__rect,
-.intro__button:focus .button__rect {
-    fill: #4ca2cd7a;
-    stroke: #4ca2cd;
-    stroke-dashoffset: 105px;
-}
-
-.intro__button a {
-    color: #fff;
-    text-decoration: none;
-} 
