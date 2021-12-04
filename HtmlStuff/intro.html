@@ -14,9 +14,20 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="#" class="navbar__item"><span class="navbar__underline">LINGVA</span></a>
-            <a href="hub.html" class="navbar__item"><span class="navbar__underline">HUB</span></a>
-            <a href="#" class="navbar__item"><span class="navbar__underline">USERNAME</span></a>
+            <div class="navbar__item"><a href="#" class="navbar__content"><span class="navbar__underline">LINGVA</span></a></div>
+            <div class="navbar__item navbar__hub">
+                <ul>
+                    <li><a href="#" class="navbar__content"><span class="navbar__underline">ЯЗЫКИ</span></a></li>
+                    <li><a href="#" class="navbar__content"><span class="navbar__underline">ОНЛАЙН-ЧАТ</span></a></li>
+                    <li><a href="#" class="navbar__content"><span class="navbar__underline">СЛОВАРЬ</span></a></li>
+                </ul>
+            </div>
+            <div class="navbar__item">
+                <a class="navbar__item__profile" href="#">
+                    <img class="navbar__profile__avatar" src="css/assets/gramm.png" alt="pfp">
+                    <span class="navbar__profile__username">USERNAME</span>
+                </a>
+            </div>
         </nav>
     </header>
 
