@@ -17,22 +17,25 @@
             <h2 class="main">Вход</h2>
             <p class="enter_link">Впервые в Lingva? <a href="~/Account/Register">Создать аккаунт!</a></p>
             <div asp-validation-summary="ModelOnly"></div>
-            <div>
-                <label class="field" asp-for="Email"></label><br />
-                <input class="Angaben" asp-for="Email" />
-                <span asp-validation-for="Email"></span>
+            <div class="field">
+                <label class="field__label" asp-for="Email"></label><br />
+                <input class="field__data" asp-for="Email" />
             </div>
-            <div>
-                <label class="field" asp-for="Password"></label><br />
-                <input class="Angaben" asp-for="Password" />
-                <span asp-validation-for="Password"></span>
+            <div class="field">
+                <label class="field__label" asp-for="Password"></label><br />
+                <input class="field__data" asp-for="Password" />
             </div>
-            <div>
-                <label asp-for="RememberMe"></label><br />
-                <input asp-for="RememberMe" />
+            <div class="field remember_me">
+                <label class="field__label" asp-for="RememberMe"></label><br />
+                <input class="field_checkbox" asp-for="RememberMe" />
             </div>
-            <div>
-                <input class="button_push" type="submit" value="Войти" />
+            <div class="button__field">
+                <input class="button__push button" type="submit" value="ВОЙТИ" />
+            </div>
+            <div class="errors">
+                <div><span asp-validation-for="Email"></span></div>
+                <div><span asp-validation-for="Password"></span></div>
+                @errors
             </div>
         </form>
     </div>

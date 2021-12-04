@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .auth {
     display: flex;
     justify-content: center;
@@ -16,13 +17,16 @@ body {
     background-color: #dbdbdb;
     position: fixed;
 }
+
 .auth h2 {
     font-weight: 300;
 }
+
 .window {
     width: 80%;
     margin-top: 10vh;
 }
+
 .main {
     color: #305252;
     text-align: center;
