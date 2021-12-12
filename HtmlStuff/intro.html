@@ -14,9 +14,20 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="#" class="navbar__item"><span class="navbar__underline">LINGVA</span></a>
-            <a href="hub.html" class="navbar__item"><span class="navbar__underline">HUB</span></a>
-            <a href="#" class="navbar__item"><span class="navbar__underline">USERNAME</span></a>
+            <div class="navbar__item"><a href="#" class="navbar__content"><span class="navbar__underline">LINGVA</span></a></div>
+            <div class="navbar__item navbar__hub">
+                <ul>
+                    <li><a href="#" class="navbar__content"><span class="navbar__underline">ЯЗЫКИ</span></a></li>
+                    <li><a href="#" class="navbar__content"><span class="navbar__underline">ОНЛАЙН-ЧАТ</span></a></li>
+                    <li><a href="#" class="navbar__content"><span class="navbar__underline">СЛОВАРЬ</span></a></li>
+                </ul>
+            </div>
+            <div class="navbar__item">
+                <a class="navbar__item__profile" href="#">
+                    <img class="navbar__profile__avatar" src="css/assets/gramm.png" alt="pfp">
+                    <span class="navbar__profile__username">USERNAME</span>
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -27,12 +38,7 @@
             <img class="intro__logo" src="css/assets/LOGO2.svg" alt="lingva_logo">
             <div class="intro__centered">
                 <h3 class="intro__description intro__text">Удобный инструмент для изучения языков</h3>
-                <a href="#" class="intro__button">
-                    <svg class="button__svg">
-                        <rect class="button__rect"></rect>
-                    </svg>
-                    <span>НАЧАТЬ!</span>
-                </a>
+                <button class="button intro__button">НАЧАТЬ</button>
                 <!--<div class="button_holder"><a href="#" class="intro__button get_started_btn">НАЧАТЬ!</a></div>-->
             </div>
         </div>
