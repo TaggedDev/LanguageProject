@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/admin_css/choose-tasktype.css" asp-append-version="true">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @await Html.PartialAsync("_CssHeaderPartial")
+    <link rel="stylesheet" href="../css/base.css" asp-append-version="true">
+    <title>Choose Task Type</title>
+</head>
+<body>
+    @await Html.PartialAsync("_HeaderPartial")
+    <h1 class="title">ВЫБЕРИТЕ ЯЗЫК:</h1>
+    <div class="container">
+        <div class="container__items">
+            <div class="item">
+                <img src="../../assets/white.png" alt="learn" class="item__image">
+                <a href="admin_choose-theme.html"><div class="item_image_overlay"><div class="item_image_overlay_text">Начать или продолжить изучать язык</div></div></a>
+            </div>
+            <div class="item">
+                <img src="../../assets/white.png" alt="dictionary" class="item__image">
+                <a href="admin_choose-theme.html"><div class="item_image_overlay"><div class="item_image_overlay_text">Учить слова, сохраненные на уроках</div></div></a>
+            </div>
+            <div class="item">
+                <img src="../../assets/white.png" alt="chat" class="item__image">
+                <a href="admin_choose-theme.html"><div class="item_image_overlay"><div class="item_image_overlay_text">Практикуй общение с реальными людьми</div></div></a>
+            </div>
+        </div>
+
+        <div class="text_choose_section">
+            <h2 class="text_title">Наличие текста:</h2>
+            <form>
+                <div>
+                    <input type="radio" id="contactChoice1"
+                           name="has_text">
+                    <label for="contactChoice1">ДА</label>
+
+                    <input type="radio" id="contactChoice3"
+                           name="has_text">
+                    <label for="contactChoice3">НЕТ</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

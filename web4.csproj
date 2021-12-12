@@ -15,6 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\admin_css\add_content.css" />
+    <Content Remove="wwwroot\css\admin_css\choose-language.css" />
+    <Content Remove="wwwroot\css\admin_css\choose-needtheme.css" />
+    <Content Remove="wwwroot\css\admin_css\choose-task.css" />
+    <Content Remove="wwwroot\css\admin_css\choose-tasktype.css" />
+    <Content Remove="wwwroot\css\admin_css\choose-theme.css" />
     <Content Remove="wwwroot\css\Registration\auth_window.css" />
   </ItemGroup>
 
@@ -39,6 +45,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\admin_css\choose-theme.css" />
+    <None Include="wwwroot\css\admin_css\choose-needtheme.css" />
+    <None Include="wwwroot\css\admin_css\add_content.css" />
+    <None Include="wwwroot\css\admin_css\choose-language.css" />
+    <None Include="wwwroot\css\admin_css\choose-tasktype.css" />
+    <None Include="wwwroot\css\admin_css\choose-task.css" />
     <None Include="wwwroot\css\Hub\hub.css" />
     <None Include="wwwroot\css\Language\lang.css" />
     <None Include="wwwroot\css\Registration\registration_window.css" />

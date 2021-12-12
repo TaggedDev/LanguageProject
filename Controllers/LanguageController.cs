@@ -12,9 +12,23 @@ namespace Lingva.Controllers
         
         public IActionResult English()
         {
-            return View();
+            Lesson lesson = new Lesson()
+            {
+                LessonID = 1
+            };               
+            return View(lesson);
         }
+
         public IActionResult Russian()
+        {
+            Lesson lesson = new Lesson()
+            {
+                LessonID = 1
+            };
+            return View(lesson);
+        }
+
+        public IActionResult Deutch()
         {
             Lesson lesson = new Lesson()
             {
