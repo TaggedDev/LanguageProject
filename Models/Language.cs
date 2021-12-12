@@ -4,8 +4,8 @@ namespace Lingva.Models
 {
     public enum ELanguageList
     {
-        Russian,
         English,
+        Russian,
         Deutsch
     }
 

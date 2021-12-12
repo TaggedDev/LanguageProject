@@ -16,6 +16,7 @@ namespace Lingva.Models
 
     public class Lesson
     {
+        public ELanguageList LanguageParent { get; set; }
         public ELessonType LessonType { get; set; }
         public int LessonID { get; set; }
         public int ThemeParentID { get; set; }

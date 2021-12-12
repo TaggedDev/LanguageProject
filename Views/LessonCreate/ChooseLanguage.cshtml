@@ -1,8 +1,11 @@
-﻿@{ 
+﻿@model Lingva.Models.Lesson
+@using Lingva.Models 
+@{
     Layout = null;
+    ELanguageList russian = ELanguageList.Russian;
+    ELanguageList english = ELanguageList.English;
+    ELanguageList deutsch = ELanguageList.Deutsch;
 }
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,21 +23,21 @@
     <h1 class="title">ВЫБЕРИТЕ ЯЗЫК:</h1>
     <div class="container">
         <div class="container__items">
-            <div class="item">
-                <img src="../../assets/white.png" alt="learn" class="item__image">
-                <a href="admin_choose-theme.html"><div class="item_image_overlay"><div class="item_image_overlay_text">Начать или продолжить изучать язык</div></div></a>
-                <div class="item__name">РУССКИЙ</div>
-            </div>
-            <div class="item">
-                <img src="../../assets/white.png" alt="dictionary" class="item__image">
-                <a href="admin_choose-theme.html"><div class="item_image_overlay"><div class="item_image_overlay_text">Учить слова, сохраненные на уроках</div></div></a>
-                <div class="item__name">АНГЛИЙСКИЙ</div>
-            </div>
-            <div class="item">
-                <img src="../../assets/white.png" alt="chat" class="item__image">
-                <a href="admin_choose-theme.html"><div class="item_image_overlay"><div class="item_image_overlay_text">Практикуй общение с реальными людьми</div></div></a>
-                <div class="item__name">НЕМЕЦКИЙ</div>
-            </div>
+            <form method="post" asp-controller="LessonCreate" asp-action="ChooseLanguage">
+                <div asp-validation-summary="ModelOnly"></div>
+                    @using (Html.BeginForm("CheckRadio", "LessonCreate", FormMethod.Post))
+                    {
+                        <div>
+                            ВЫБЕРИТЕ ЯЗЫК:<br />
+                            РУССКИЙ @Html.RadioButton("Language", "russian")
+                            АНГЛИЙСКИЙ @Html.RadioButton("Language", "english")
+                            НЕМЕЦКИЙ @Html.RadioButton("Language", "deutsch")
+                        </div>
+                        <input type="submit" value="submit" />
+                    }
+
+
+            </form>
         </div>
     </div>
 </body>

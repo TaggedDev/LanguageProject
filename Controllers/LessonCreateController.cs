@@ -1,14 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Lingva.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Lingva.Controllers
 {
     public class LessonCreateController : Controller
     {
-        public IActionResult ChooseLanguage()
+        
+        public string CheckRadio(FormCollection form)
+        {
+            return $"Returned value is {form["Language"]}";
+        }
+
+        public IActionResult ChooseLanguage()   
         {
             return View();
         }
