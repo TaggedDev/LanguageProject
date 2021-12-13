@@ -18,14 +18,9 @@
     <div class="container">
         <div class="container__items">
             <form method="post" asp-controller="LessonCreate" asp-action="ChooseLanguage">
-                    {
-                            НЕМЕЦКИЙ @Html.RadioButton("Language", "deutsch")
-                        </div>
-                        <input type="submit" value="submit" />
-                    }
-
-
+                English @Html.RadioButtonFor(m => m.Language, "English")
                 Russian @Html.RadioButtonFor(m => m.Language, "Russian")
+                Deutsch @Html.RadioButtonFor(m => m.Language, "Deutsch")
                 <input type="submit" name="Далее" />
             </form>
         </div>
