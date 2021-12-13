@@ -1,20 +1,33 @@
-﻿using Lingva.Models;
-using Microsoft.AspNetCore.Http;
+﻿using Lingva.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lingva.Controllers
 {
     public class LessonCreateController : Controller
     {
-        
-        public string CheckRadio(FormCollection form)
-        {
-            return $"Returned value is {form["Language"]}";
-        }
-
-        public IActionResult ChooseLanguage()   
+        public IActionResult Test()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult ChooseLanguage(ChooseLanguage model)
+        {
+            // Когда пользователь нажимает на кнопку, он попадает сюда. В model содержится данные, 
+            // взятые в radiobutton'ах
+            return View(model);
+        }
+
+        public IActionResult ChooseLanguage()
+        {
+
+            return View();
+        }
+
+        public IActionResult LessonTemplate()   
+        {
+            ChooseLanguage choose = new ChooseLanguage();
+            return View(choose);
         }
 
         public IActionResult ChooseTheme()
