@@ -1,7 +1,5 @@
-﻿@{
-    Layout = null;
-}
-
+﻿@model Lingva.ViewModels.Lesson
+@{ Layout = null; }
 
 
 <!DOCTYPE html>
@@ -16,8 +14,8 @@
     <title>Choose Theme</title>
 </head>
 <body>
-    @await Html.PartialAsync("_HeaderPartial")
-    <div class="container">
+    @*@await Html.PartialAsync("_HeaderPartial")*@
+    <!--<div class="container">
         <p class="nomer-temi">ВЫБЕРИТЕ НОМЕР ТЕМЫ:</p>
         <div class="scrollable">
             <table>
@@ -79,6 +77,36 @@
         </div>
 
         <button class="new-lesson">НОВЫЙ УРОК</button>
-    </div>
+    </div>-->
+
+    <div class="container">
+        <p class="nomer-temi">ВЫБЕРИТЕ НОМЕР ТЕМЫ:</p>
+        <div class="scrollable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Урока</th>
+                        <th>Имя урока</th>
+                        <th>Кол-во занятий в уроке</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#">@Html.Display(Model.Language)</a></td>
+                        <td><a href="#">@Html.Display(Model.ThemeId.ToString())</a></td>
+                        <td><a href="#">4 </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div class="scrollable">
+    </div class="container">
+                    <!--
+            <form method="post" asp-controller="LessonCreate" asp-action="ChooseThemePost">
+                    Name @Html.RadioButtonFor(m => m.ThemeId, 1)
+                    Russian @Html.RadioButtonFor(m => m.ThemeId, 2)
+                    Deutsch @Html.RadioButtonFor(m => m.ThemeId, 3)
+                <input type="submit" name="Далее" />
+            </form>
+            -->
 </body>
 </html>

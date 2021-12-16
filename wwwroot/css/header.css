@@ -36,11 +36,11 @@
     justify-content: space-between;
 }
 
-    .navbar__hub ul li {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+.navbar__hub ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .navbar__content {
     text-decoration: none;
