@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Lingva.Models.Lesson
+@{
     Layout = null;
 }
 
@@ -20,12 +21,15 @@
     <div class="container">
         <div class="select_task_type">SELECT TASK TYPE:</div>
         <div class="main">
-            <textarea class="textarea" type="text" placeholder="Input text here"></textarea>
-            <input class="add_button" type="button" value="ADD" name="add_button" />
-            <p class="text">ADD TASK:</p>
-            <textarea class="inputs" typeof="text">"text"</textarea>
-            <p class="text">RIGHT ANSWER:</p>
-            <textarea class="inputs" typeof="text">"text"</textarea>
+            <form method="post" asp-controller="LessonCreate" asp-action="ChooseTaskPost">
+                <input class="textarea" type="text" placeholder="Input text here" asp-for="TextFieldContent">
+                <input class="add_button" type="button" value="ADD" name="add_button" />
+                <p class="text">ADD TASK:</p>
+                <input class="inputs" type="text" />
+                <p class="text">RIGHT ANSWER:</p>
+                <input class="inputs" type="text" />
+                <input type="submit" name="submit" />
+            </form>
         </div>
     </div>
 </body>

@@ -1,4 +1,4 @@
-﻿using Lingva.ViewModels;
+﻿using Lingva.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lingva.Controllers
@@ -47,7 +47,7 @@ namespace Lingva.Controllers
             return View(model);
         }
         
-        [HttpPost("ChooseTask")]
+        [HttpPost("ChooseTaskType")]
         public IActionResult ChooseTaskTypePost(Lesson model)
         {
             return View();

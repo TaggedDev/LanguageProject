@@ -1,4 +1,4 @@
-﻿@model Lingva.ViewModels.Lesson
+﻿@model Lingva.Models.Lesson
 @{
     Layout = null;
 }
@@ -18,9 +18,9 @@
     <div class="container">
         <div class="container__items">
             <form method="post" asp-controller="LessonCreate" asp-action="ChooseLanguage">
-                English @Html.RadioButtonFor(m => m.Language, "English")
-                Russian @Html.RadioButtonFor(m => m.Language, "Russian")
-                Deutsch @Html.RadioButtonFor(m => m.Language, "Deutsch")
+                English @Html.RadioButtonFor(m => m.LanguageParent, "English")
+                Russian @Html.RadioButtonFor(m => m.LanguageParent, "Russian")
+                Deutsch @Html.RadioButtonFor(m => m.LanguageParent, "Deutsch")
                 <input type="submit" name="Далее" />
             </form>
         </div>
