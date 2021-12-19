@@ -39,23 +39,23 @@ namespace Lingva.Controllers
         [HttpPost("ChooseTask")]
         public IActionResult ChooseTaskPost(Lesson model)
         {
-            return RedirectToAction("ChooseTaskType", model);
+            return RedirectToAction("ChooseTask", model);
         }
 
         public IActionResult ChooseTask(Lesson model)
         {
             return View(model);
         }
-        
+
         [HttpPost("ChooseTaskType")]
         public IActionResult ChooseTaskTypePost(Lesson model)
         {
-            return View();
+            return RedirectToAction("ChooseTaskType", model);
         }
 
         public IActionResult ChooseTaskType(Lesson model)
         {
-            return RedirectToAction("ChooseTaskType", model);
+            return View(model);
         }
 
         public IActionResult ChooseNeedTheme()
