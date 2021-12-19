@@ -48,10 +48,7 @@ namespace Lingva.Controllers
         }
 
         [HttpPost("ChooseTaskType")]
-        public IActionResult ChooseTaskTypePost(Lesson model)
-        {
-            return RedirectToAction("ChooseTaskType", model);
-        }
+        public IActionResult ChooseTaskTypePost(Lesson model) => RedirectToAction("ChooseTaskType", model);
 
         public IActionResult ChooseTaskType(Lesson model)
         {

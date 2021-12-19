@@ -22,12 +22,9 @@
         <div class="select_task_type">SELECT TASK TYPE:</div>
         <div class="main">
             <form method="post" asp-controller="LessonCreate" asp-action="ChooseTaskPost">
-                <input class="textarea" type="text" placeholder="Input text here" asp-for="TextFieldContent">
-                <input class="add_button" type="button" value="ADD" name="add_button" />
+                @Html.TextAreaFor(value => value.TextFieldContent, new { @class="textarea"})
                 <p class="text">ADD TASK:</p>
-                <input class="inputs" type="text" />
-                <p class="text">RIGHT ANSWER:</p>
-                <input class="inputs" type="text" />
+                Number of tasks 0
                 <input type="submit" name="submit" />
             </form>
         </div>
