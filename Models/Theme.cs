@@ -18,6 +18,6 @@ namespace Lingva.Models
         public EThemeLevel ThemeLevel { get; set; }
         public int ThemeID { get; set; }
         public string ThemeTopic { get; set; }
-        public List<Lesson> Lessons { get; set; }
+        public List<Task> Lessons { get; set; }
     }
 }
