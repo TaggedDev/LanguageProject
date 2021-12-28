@@ -1,9 +1,8 @@
 ﻿@model Lingva.Models.Lesson
 @{
     Layout = null;
+    List<int> IDs = ViewBag.IDs;
 }
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,11 +20,11 @@
     <div class="container">
         <div class="select_task_type">SELECT TASK TYPE:</div>
         <div class="main">
-            <form method="post" asp-controller="LessonCreate" asp-action="ChooseTaskPost">
-                @Html.TextAreaFor(value => value.TextFieldContent, new { @class="textarea"})
-                <p class="text">ADD TASK:</p>
-                Number of tasks 0
-                <input type="submit" name="submit" />
+            <form method="post" asp-controller="LessonCreate" asp-action="ChooseLessonPost">
+                @Html.HiddenFor(m => m.LanguageParent, Model.LanguageParent)
+                @Html.HiddenFor(m => m.ThemeParentID, Model.ThemeParentID)
+                @Html.DropDownListFor(m => m.LessonParentID, new SelectList(IDs), "Выберите урок:")
+                <input type="submit" name="Далее" />
             </form>
         </div>
     </div>
