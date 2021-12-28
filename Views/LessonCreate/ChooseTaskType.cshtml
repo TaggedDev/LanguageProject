@@ -24,15 +24,10 @@
             @Html.HiddenFor(m => m.LanguageParent, Model.LanguageParent)
             @Html.HiddenFor(m => m.LessonParentID, Model.LessonParentID)
             @Html.HiddenFor(m => m.ThemeParentID, Model.ThemeParentID)
-
             <div class="container__items">
                 Fill @Html.RadioButtonFor(type => type.LessonType, "fill")
                 Trans @Html.RadioButtonFor(type => type.LessonType, "trans")
                 Match @Html.RadioButtonFor(type => type.LessonType, "match")
-            </div>
-
-            <div>
-                @Html.CheckBoxFor(f => f.HasTextField)
             </div>
             <input type="submit" name="submit" />
         </form>

@@ -89,7 +89,77 @@ namespace Lingva.Controllers
         public IActionResult ChooseTaskTypePost(Task model)
         {
             // Add to db and then redirect
-            return RedirectToAction("ChooseTaskType", model);
+            return RedirectToAction("EditTask", model);
         }
+
+        /// <summary>
+        /// Пятая, конечная страница урока. Из неё можно попасть в редактирование полей и текста.
+        /// </summary>
+        public IActionResult EditTask(Task model)
+        {
+            return View(model);
+        }
+        
+        /// <summary>
+        /// Вызывается при отправке формы. Должна отредактировать сохраненное текстовое поле
+        /// </summary>
+        [HttpPost("EditTask")]
+        public IActionResult EditTaskPost(Task model)
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Шестая, необязательная страница создания урока. Открывает страницу редактирования полей
+        /// </summary>
+        public IActionResult EditTaskFields(Task model)
+        {
+            return View();
+        }
+        
+        /// <summary>
+        /// Вызывается по нажатии кнопки "сохранить" в поле для ответов к задаче у задания
+        /// </summary>
+        [HttpPost("EditTaskFields")]
+        public IActionResult EditTaskFieldsPost(Task model)
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Открывает страницу с полем ввода названия темы. 
+        /// Вызывается по нажатии кнопки "Новая тема" в LessonCreate/ChooseTheme
+        /// </summary>
+        public IActionResult NewTheme()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Вызывается по нажатию кнопки "далее" после ввода названия урока
+        /// </summary>
+        [HttpPost("NewTheme")]
+        public IActionResult NewThemePost(Task model)
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Открывает страницу с полем ввода названия темы. 
+        /// Вызывается по нажатии кнопки "Новый урок" в LessonCreate/ChooseLesson
+        /// </summary>
+        public IActionResult NewLesson()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Вызывается по нажатию кнопки "далее" после ввода названия урока
+        /// </summary>
+        [HttpPost("NewLesson")]
+        public IActionResult NewLessonPost(Task model)
+        {
+            return View();
+        }    
     }
 }
