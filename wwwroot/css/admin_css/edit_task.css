@@ -26,11 +26,7 @@ body {
     margin-top: 40px;
     height: 64px;
     width: 320px;
-    float:right
-}
-
-.textarea_container {
-    position: relative;
+    float: right;
 }
 
 .textarea {

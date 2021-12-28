@@ -21,6 +21,9 @@
     <Content Remove="wwwroot\css\admin_css\choose-task.css" />
     <Content Remove="wwwroot\css\admin_css\choose-tasktype.css" />
     <Content Remove="wwwroot\css\admin_css\choose-theme.css" />
+    <Content Remove="wwwroot\css\admin_css\edit_task.css" />
+    <Content Remove="wwwroot\css\admin_css\edit_task_fields.css" />
+    <Content Remove="wwwroot\css\admin_css\new_theme.css" />
     <Content Remove="wwwroot\css\Registration\auth_window.css" />
   </ItemGroup>
 
@@ -51,6 +54,9 @@
     <None Include="wwwroot\css\admin_css\choose-language.css" />
     <None Include="wwwroot\css\admin_css\choose-tasktype.css" />
     <None Include="wwwroot\css\admin_css\choose-task.css" />
+    <None Include="wwwroot\css\admin_css\edit_task.css" />
+    <None Include="wwwroot\css\admin_css\edit_task_fields.css" />
+    <None Include="wwwroot\css\admin_css\new_theme.css" />
     <None Include="wwwroot\css\Hub\hub.css" />
     <None Include="wwwroot\css\Language\lang.css" />
     <None Include="wwwroot\css\Registration\registration_window.css" />
