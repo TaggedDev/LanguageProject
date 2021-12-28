@@ -25,8 +25,8 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    color: #292929;
-    
+    color: #fff;
+    text-decoration: none;
     text-align: center;
     width: 30%;
 }
