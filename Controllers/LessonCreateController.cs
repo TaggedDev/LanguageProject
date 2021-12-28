@@ -1,63 +1,95 @@
 ﻿using Lingva.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Lingva.Controllers
 {
+    /// <summary>
+    /// Класс управляет системой создания и добавления уроков в базу данных
+    /// </summary>
     public class LessonCreateController : Controller
     {
-        public IActionResult Test()
-        {
-            return View();
-        }
+        /* Методы, возвращающие IActionResult попарно разбиты. 
+         * Методы с атрибутом HttpPost вызываются по нажатии на кнопку отправки формы
+         * Методы без атрибута приравниваются к атрибуту HttpGet и вызываются при 
+         * вызове самой страницы. 
+         * Задача класса - пошагово создать урок, сохраняя промежуточный результат в базу данных */
 
+        /// <summary>
+        /// Первая стартовая страницы создания урока. На странице 3 радиокнопки с выбором языка
+        /// </summary>
+        public IActionResult ChooseLanguage() => View();
+        
+        /// <summary>
+        /// Вызывается по нажатии на кнопку отправки формы в LessonCreate/ChooseLanguage.
+        /// </summary>
+        /// <param name="model">Объект модели с заполненным LanguageParent</param>
         [HttpPost("ChooseLanguage")]
-        public IActionResult ChooseLanguage(Lesson model)
+        public IActionResult ChooseLanguage(Task model)
         {
-            // Когда пользователь нажимает на кнопку, он попадает сюда. В model содержится данные, 
-            // взятые в radiobutton'ах
+            // Add to database then redirect
             return RedirectToAction("ChooseTheme", model);
         }
 
-        public IActionResult ChooseLanguage()
+        /// <summary>
+        /// Вторая страница создания урока. На странице выпадающее меню (внутри есть вариант "добавить") и 1 кнопка - "выбрать"
+        /// </summary>
+        /// <param name="model"></param>
+        public IActionResult ChooseTheme(Task model)
         {
-            return View();
+            List<int> numbers = new List<int>{ 1, 2, 3, 4, 5, 6 };
+            ViewBag.IDs = numbers;
+            return View(model);
         }
 
+        /// <summary>
+        /// Вызывается по нажатии на кнопку отправки формы в LessonCreate/ChooseTheme
+        /// </summary>
+        /// <param name="model">Объект модели с заполненным полем ThemeParentID</param>
         [HttpPost("ChooseTheme")]
-        public IActionResult ChooseThemePost(Lesson model)
+        public IActionResult ChooseThemePost(Task model)
         {
-            // Вызывается при отправке формы
-            return RedirectToAction("ChooseTask", model);
+            // Add to db and then redirect
+            return RedirectToAction("ChooseLesson", model);
         }
 
-        public IActionResult ChooseTheme(Lesson model)
+        /// <summary>
+        /// Третья страница создания урока. На ней выпадающее меню с функцией создания нового урока или выбором 
+        /// существующего. И кнопка отправки формы.
+        /// </summary>
+        public IActionResult ChooseLesson(Task model)
         {
-            // Вызывается из другого Action
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+            ViewBag.IDs = numbers;
             return View(model);
         }
 
-        [HttpPost("ChooseTask")]
-        public IActionResult ChooseTaskPost(Lesson model)
+        /// <summary>
+        /// Вызывается при отправке формы третьего урока в LessonCreate/ChooseTask
+        /// </summary>
+        /// <param name="model">Заполненная модель с LessonParentID</param>
+        [HttpPost("ChooseLesson")]
+        public IActionResult ChooseLessonPost(Task model)
         {
-            return RedirectToAction("ChooseTask", model);
+            // Add to db
+            return RedirectToAction("ChooseTaskType", model);
         }
 
-        public IActionResult ChooseTask(Lesson model)
-        {
-            return View(model);
-        }
+        /// <summary>
+        /// Четвёртая страница создания урока. На странице радиокнопки с типом задания, радиокнопки с типом наличия текста
+        /// и кнопка "далее", отправляющая данные в форму
+        /// </summary>
+        public IActionResult ChooseTaskType(Task model) => View(model);
 
+        /// <summary>
+        /// Вызывается при отправке формы в LessonCreate/ChooseTaskType
+        /// </summary>
+        /// <param name="model">Модель с заполненным полем LessonType</param>
         [HttpPost("ChooseTaskType")]
-        public IActionResult ChooseTaskTypePost(Lesson model) => RedirectToAction("ChooseTaskType", model);
-
-        public IActionResult ChooseTaskType(Lesson model)
+        public IActionResult ChooseTaskTypePost(Task model)
         {
-            return View(model);
-        }
-
-        public IActionResult ChooseNeedTheme()
-        {
-            return View();
+            // Add to db and then redirect
+            return RedirectToAction("ChooseTaskType", model);
         }
     }
 }

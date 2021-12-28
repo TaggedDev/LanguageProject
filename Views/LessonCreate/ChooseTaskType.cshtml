@@ -1,4 +1,4 @@
-﻿@model Lingva.Models.Lesson
+﻿@model Lingva.Models.Task
 @{
     Layout = null;
 }
@@ -21,6 +21,10 @@
     <h1 class="title">ВЫБЕРИТЕ ЯЗЫК:</h1>
     <div class="container">
         <form method="post" asp-controller="LessonCreate" asp-action="ChooseTaskTypePost">
+            @Html.HiddenFor(m => m.LanguageParent, Model.LanguageParent)
+            @Html.HiddenFor(m => m.LessonParentID, Model.LessonParentID)
+            @Html.HiddenFor(m => m.ThemeParentID, Model.ThemeParentID)
+
             <div class="container__items">
                 Fill @Html.RadioButtonFor(type => type.LessonType, "fill")
                 Trans @Html.RadioButtonFor(type => type.LessonType, "trans")
